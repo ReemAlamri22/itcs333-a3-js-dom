@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         (currentFilter === 'active' && !done) ||
         (currentFilter === 'done' && done);
 
-      item.hidden = !visible;
-    });
+      item.style.display = visible ? '' : 'none';
+        });
   }
 
   function refresh() {
