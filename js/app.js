@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let li = document.createElement('li');
 
     let span = document.createElement('span');
-    span.className = 'item-text'; // changed
+    span.className = 'item-text'; 
     span.textContent = text;
 
     let delBtn = document.createElement('button');
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (e.target.classList.contains('delete-btn')) {
       li.remove();
-    } else { // changed
+    } else { 
       li.classList.toggle('completed');
     }
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelector('#filter-done').addEventListener('click', handleFilterClick);
 
-  // Initial update
+  
   showError(false);
   refresh();
 });
