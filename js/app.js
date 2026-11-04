@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let li = document.createElement('li');
 
     let span = document.createElement('span');
+    span.className = 'item-text'; // changed
     span.textContent = text;
 
     let delBtn = document.createElement('button');
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (e.target.classList.contains('delete-btn')) {
       li.remove();
-    } else if (e.target.tagName === 'SPAN') {
+    } else { // changed
       li.classList.toggle('completed');
     }
 
